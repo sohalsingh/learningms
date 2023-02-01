@@ -1,11 +1,11 @@
 import { Button, Typography } from "@material-ui/core";
 
 import React from "react";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 import Styles from "./Notfound.module.css";
 
 const NotFound = () => {
-    const history=useHistory()
+    const history=useNavigate()
   return (
     <div className={Styles.main__div}>
       <Typography className="text-center text-light" variant="h2">

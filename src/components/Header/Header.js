@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, NavLink, useHistory, withRouter } from "react-router-dom";
+import { Link, NavLink, useNavigate,  } from "react-router-dom";
 import VisibilityOffIcon from "@material-ui/icons/VisibilityOff";
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive";
 import ChatIcon from "@material-ui/icons/Chat";
@@ -7,12 +7,12 @@ import SettingsIcon from "@material-ui/icons/Settings";
 import { Avatar, Button, IconButton } from "@material-ui/core";
 import "./Header.css";
 import ClearIcon from "@material-ui/icons/Clear";
-import DragHandleIcon from "@material-ui/icons/DragHandle";
+// import DragHandleIcon from "@material-ui/icons/DragHandle";
 import NotesIcon from "@material-ui/icons/Notes";
 import { useDispatch } from "react-redux";
 
 const Header = () => {
-  const history = useHistory();
+  const history = useNavigate();
   const dispatch = useDispatch();
   const [toggle, setToggle] = useState(false);
   const user = JSON.parse(localStorage.getItem("user"));
@@ -161,4 +161,4 @@ const Header = () => {
   );
 };
 
-export default withRouter(Header);
+export default Header;

@@ -3,8 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
-  useHistory,
+  Routes,
+  useNavigate,
 } from "react-router-dom";
 import DashBoard from "./pages/DashBoard/Dashboard";
 import Settings from "./pages/Settings/Settings";
@@ -31,7 +31,7 @@ import Libray from "./pages/Library/Libray";
 import Ucam from "./pages/Ucam/Ucam";
 
 const Routing = () => {
-  const history = useHistory();
+  const history = useNavigate();
   const dispatch = useDispatch();
   const user = JSON.parse(localStorage.getItem("user"));
   // console.log(user)
@@ -43,7 +43,7 @@ const Routing = () => {
     }
   }, []);
   return (
-    <Switch>
+    <Routes>
       <StudentRoute exact path="/">
         <DashBoard />
       </StudentRoute>
@@ -97,7 +97,7 @@ const Routing = () => {
       <Route  path="*">
         <NotFound />
       </Route>
-    </Switch>
+    </Routes>
   );
 };
 

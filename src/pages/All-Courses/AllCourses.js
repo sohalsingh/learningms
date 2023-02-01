@@ -1,8 +1,8 @@
 
 import { Typography } from '@material-ui/core';
-import React,{lazy, Suspense} from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
-import CourseCard from '../DashBoard/CourseCard/CourseCard';
+import React,{ Suspense} from 'react';
+import {  Container } from 'react-bootstrap';
+// import CourseCard from '../DashBoard/CourseCard/CourseCard';
 import CardOfAllCourse from './CardOfCourse/CardOfAllCourse';
 
 

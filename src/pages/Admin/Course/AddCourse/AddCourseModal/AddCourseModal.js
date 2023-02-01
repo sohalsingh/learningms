@@ -1,7 +1,7 @@
 import { Button, Typography } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { Modal, Form } from "react-bootstrap";
-import Axios from "axios";
+// import Axios from "axios";
 import Toast_Comp from "../../../../../components/Toast/Toast_Comp";
 import Spinner_comp from "../../../../../components/Spinner/Spinner_comp";
 import "./AddCourseModal.css";

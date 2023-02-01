@@ -4,7 +4,7 @@ import { Col, Form, Row } from "react-bootstrap";
 import Alert_Comp from "../../components/Alert/Alert_Comp";
 import Spinner_comp from "../../components/Spinner/Spinner_comp";
 import Toast_Comp from "../../components/Toast/Toast_Comp";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const Register = () => {
@@ -15,7 +15,7 @@ const Register = () => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(false);
-  const history = useHistory();
+  const history = useNavigate();
 
   const {user} = useSelector((state) => state.auth);
 
@@ -55,7 +55,7 @@ const Register = () => {
   }
 
   useEffect(() => {
-    if(user && user.role=="Student")
+    if(user && user.role==="Student")
     {
       history.push('/')
     }

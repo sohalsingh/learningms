@@ -1,11 +1,11 @@
-import Styles from "./login.module.css";
+// import Styles from "./login.module.css";
 import { Button, Container, Paper, Typography } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
 import Alert_Comp from "../../components/Alert/Alert_Comp";
 import Spinner_comp from "../../components/Spinner/Spinner_comp";
 import Toast_Comp from "../../components/Toast/Toast_Comp";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 const Login = () => {
@@ -14,7 +14,7 @@ const Login = () => {
   const [error, setError] = useState();
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState(false);
-  const history = useHistory();
+  const history = useNavigate();
   const {user} = useSelector((state) => state.auth);
   //console.log(user);
 
@@ -57,7 +57,7 @@ const Login = () => {
   };
 
   useEffect(() => {
-    if(user && user.role=="Student")
+    if(user && user.role==="Student")
     {
       history.push('/')
     }

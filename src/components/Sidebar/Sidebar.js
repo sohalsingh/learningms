@@ -1,11 +1,11 @@
 import { Button } from "@material-ui/core";
 import React from "react";
 import { useDispatch } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 
 const Sidebar = ({ title, link, Icon ,admin }) => {
-  const history = useHistory();
+  const history = useNavigate();
   const dispatch = useDispatch();
 
   return (

@@ -2,7 +2,7 @@ import { Container, Paper, Typography } from "@material-ui/core";
 
 import React from "react";
 import CommonHeader from "../../components/Common/CommonHeader";
-import Styles from "./CourseInfo.module.css";
+// import Styles from "./CourseInfo.module.css";
 import NoticeToggle from "./NoticeToggle/NoticeToggle";
 
 const CourseInfo = () => {
